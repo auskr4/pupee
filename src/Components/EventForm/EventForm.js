@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import './EventForm.css';
 
-function EventForm() {
+function EventForm( {onAdd} ) {
     const [eventType, setEventType] = useState("");
     const [eventTime, setEventTime] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(`type: ${eventType}, time: ${eventTime}`)
-        //onAdd({ type: eventType, time: eventTime})
+        //console.log(`type: ${eventType}, time: ${eventTime}`)
+        onAdd({ type: eventType, time: eventTime});
+        setEventType("");
+        setEventTime("");
     }
 
     return (
@@ -29,7 +31,7 @@ function EventForm() {
                 onChange={(e) => setEventTime(e.target.value)}
                 />
             </label>
-            <input type="submit" />
+            <input type="submit" value="Add Event" />
         </form>
     );
 }
