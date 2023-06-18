@@ -1,0 +1,11 @@
+.EventForm label {
+    display: block;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.EventForm input {
+    display: block;
+    text-align: left;
+    margin-left: 5%;
+}
