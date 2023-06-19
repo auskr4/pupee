@@ -1,16 +1,20 @@
 import React, { useState } from "react";
+import TimePicker from "react-time-picker";
 import './EventForm.css';
+
 
 function EventForm( {onAdd} ) {
     const [eventType, setEventType] = useState("");
     const [eventTime, setEventTime] = useState("");
+    const [eventDate, setEventDate] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
         //console.log(`type: ${eventType}, time: ${eventTime}`)
-        onAdd({ type: eventType, time: eventTime});
+        onAdd({ type: eventType, time: eventTime, date: eventDate});
         setEventType("");
         setEventTime("");
+        setEventDate("");
     }
 
     return (
@@ -25,13 +29,15 @@ function EventForm( {onAdd} ) {
             </label>
             <label>
                 Please log the time: 
-                <input 
-                type="time" 
-                value={eventTime}
-                onChange={(e) => setEventTime(e.target.value)}
-                />
+                {/* <TimePicker 
+                    format="hh:mm a"
+                    value={eventTime}
+                    onChange={setEventTime}
+                /> */}
+                <input type="time" value={eventTime} onChange={(e) => setEventTime(e.target.value)}/>
+                <input type="date"value={eventDate} onChange={(e) => setEventDate(e.target.value)}/>
             </label>
-            <input type="submit" value="Add Event" />
+            <input type="submit" value="Add Event"/>
         </form>
     );
 }

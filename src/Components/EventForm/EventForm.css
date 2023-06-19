@@ -5,7 +5,11 @@
 }
 
 .EventForm input {
-    display: block;
     text-align: left;
+    margin-left: 5%;
+}
+
+.EventForm input[type="submit"] {
+    display: block;
     margin-left: 5%;
 }
