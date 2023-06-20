@@ -27,13 +27,8 @@ function EventForm( {onAdd} ) {
                     <option value="potty">Potty</option>
                 </select>
             </label>
-            <label>
+            <label className="dateTimePicker">
                 Please log the time: 
-                {/* <TimePicker 
-                    format="hh:mm a"
-                    value={eventTime}
-                    onChange={setEventTime}
-                /> */}
                 <input type="time" value={eventTime} onChange={(e) => setEventTime(e.target.value)}/>
                 <input type="date"value={eventDate} onChange={(e) => setEventDate(e.target.value)}/>
             </label>
@@ -42,4 +37,4 @@ function EventForm( {onAdd} ) {
     );
 }
 
-export default EventForm
+export default EventForm;
