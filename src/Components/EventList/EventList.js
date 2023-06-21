@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import './EventList.css'
 function EventList({events, onDelete }) {
 
     //sort Events
@@ -15,8 +15,10 @@ function EventList({events, onDelete }) {
         return dateGroups;
     }, {});
 
+    const hasEvents = events.length > 0;
+
     return (
-        <div className="eventListContainer">
+        <div className={hasEvents ? "eventListContainer" : "eventListContainerEmpty"}>
             {Object.keys(eventsByDate).map(date => (
                 <div key={date}>
                     <h2>{date}</h2>

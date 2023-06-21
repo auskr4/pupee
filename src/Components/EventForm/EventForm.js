@@ -19,17 +19,24 @@ function EventForm( {onAdd} ) {
 
     return (
         <form onSubmit={handleSubmit} className="EventForm">
-            <label>
-                Event Type: 
-                <select value={eventType} onChange={(e) => setEventType(e.target.value)}>
-                    <option value="">Please select Feed or Potty</option>
-                    <option value="feed">Feed</option>
-                    <option value="potty">Potty</option>
-                </select>
+            <label className="eventType">
+                <div style={{display: 'flex'}}>
+                    <div>Event Type:</div>
+                    <div>
+                        <select value={eventType} onChange={(e) => setEventType(e.target.value)}>
+                            <option value="">Please select Feed or Potty</option>
+                            <option value="feed">Feed</option>
+                            <option value="potty">Potty</option>
+                        </select>
+                    </div>
+                </div>
             </label>
-            <label className="dateTimePicker">
-                Please log the time: 
+            <label className="timePicker">
+                Time: 
                 <input type="time" value={eventTime} onChange={(e) => setEventTime(e.target.value)}/>
+            </label>
+            <label className="datePicker">
+                Date:
                 <input type="date"value={eventDate} onChange={(e) => setEventDate(e.target.value)}/>
             </label>
             <input type="submit" value="Add Event"/>

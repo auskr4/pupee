@@ -45,26 +45,25 @@
   padding: 20px;
 }
 
-.EventForm label {
-  display: flex;     /* Make the label's child elements to line up in a row */
-  /* align-items: center;   Optional: Align the child elements vertically in the middle */
-  gap: 1rem;     /* Optional: Add some gap between the child elements */
+/* .EventForm label {
+  display: flex;      Make the label's child elements to line up in a row 
+   align-items: center;   Optional: Align the child elements vertically in the middle 
+  gap: 1rem;      Optional: Add some gap between the child elements 
   text-align: left;
   margin-left: 5%;
 }
 
 .EventForm input {
-  margin-left: 0;    /* Remove left margin for inputs to align them properly */
+  margin-left: 0;     Remove left margin for inputs to align them properly 
 }
 
 .EventForm .dateTimePicker {
-  display: flex;     /* Make the label's child elements to line up in a row */
-  align-items: center;   /* Optional: Align the child elements vertically in the middle */
-  gap: 1rem;     /* Optional: Add some gap between the child elements */
+  display: flex;      Make the label's child elements to line up in a row 
+  align-items: center;    Optional: Align the child elements vertically in the middle 
 }
 
 .EventForm .dateTimePicker input {
-  margin-left: 0;    /* Remove left margin for inputs to align them properly */
+  margin-left: 0;     Remove left margin for inputs to align them properly 
 }
 
 .EventList {
@@ -74,8 +73,8 @@
 }
 
 .eventListContainer {
-  border: 1px solid #c0a7a7;  /* Add a border around the event list */
-  padding: 10px;  /* Add some space around the content inside the border */
-  margin: 10px;   /* Add some space around the border itself */
+  border: 1px solid #c0a7a7;   Add a border around the event list 
+  padding: 10px;   Add some space around the content inside the border 
+  margin: 10px;    Add some space around the border itself 
 }
-
+ */

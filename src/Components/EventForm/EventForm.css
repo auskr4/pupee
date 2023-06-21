@@ -1,7 +1,17 @@
+.eventType {
+    display: inline;
+}
+
 .EventForm label {
     display: block;
+    align-items: center; /* Optional: To vertically align the text and the select field */
     text-align: left;
     margin-left: 5%;
+    padding: 5px;
+}
+
+.EventForm label select {
+    width: auto;
 }
 
 .EventForm input {
@@ -12,4 +22,56 @@
 .EventForm input[type="submit"] {
     display: block;
     margin-left: 5%;
+}
+
+.EventForm input[type="time"],
+.EventForm input[type="date"] {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.EventForm label .timePicker {
+    margin-left: 1px;
+}  
+
+.EventForm label .datePicker {
+    margin-left: 1px;
+}  
+
+.EventForm input[type="time"]:focus,
+.EventForm input[type="date"]:focus {
+    outline: none;
+    border-color: #aaa;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.1);
+}
+
+.EventForm select {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.EventForm select:focus {
+    outline: none;
+    border-color: #aaa;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.1);
+}
+
+.EventForm input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #007BFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.EventForm input[type="submit"]:hover {
+    background-color: #0056b3;
 }
