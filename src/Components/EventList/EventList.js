@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import './EventList.css'
+import FastfoodIcon from '@mui/icons-material/Fastfood';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+
+
+
 function EventList({events, onDelete }) {
 
     //sort Events
@@ -24,8 +29,8 @@ function EventList({events, onDelete }) {
                     <h2>{date}</h2>
                     {eventsByDate[date].map((event, index) => (
                         <p key={index}>
-                            {event.type} at {event.time}
-                            <button onClick={() => onDelete(event.id)}>Delete</button>
+                            {event.type === 'feed' ? <FastfoodIcon /> : <CheckCircleOutlineIcon className="peeCheck"/> } {event.type === 'feed' ? 'fed' : event.type} at {event.time}
+                            <button className="deleteButton" onClick={() => onDelete(event.id)}>Delete</button>
                         </p>
                     ))}
                 </div>

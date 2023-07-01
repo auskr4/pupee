@@ -4,6 +4,7 @@ import './App.css';
 import EventForm from './Components/EventForm/EventForm';
 import EventList from "./Components/EventList/EventList";
 import axios from 'axios';
+import PetsIcon from '@mui/icons-material/Pets';
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -43,8 +44,8 @@ const deleteEvent = (id) => {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>puppee</h1>
+      <header className="App-header justify-start">
+        <h1 className="text-left pl-24">puppee <PetsIcon /></h1>
         <div className="App-content">
           <EventForm onAdd={addEvent} />
           <EventList events={events} onDelete={deleteEvent} />

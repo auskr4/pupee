@@ -2,6 +2,16 @@
     display: inline;
 }
 
+/* .EventForm {
+    border: 1px solid #bba2a2; 
+} */
+
+.eventFormContainer {
+    border: 1px solid #bba2a2;  /* Add a border around the event list */
+    padding: 10px;  /* Add some space around the content inside the border */
+    margin: 10px;   /* Add some space around the border itself */
+  }
+
 .EventForm label {
     display: block;
     align-items: center; /* Optional: To vertically align the text and the select field */

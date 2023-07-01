@@ -7,6 +7,8 @@
   .eventListContainer p {
     padding: 10px 0;   /* Add 10px padding at the top and bottom, 0 at the left and right */
     border-bottom: 1px solid #ddd;  /* Add a line below each event */
+    font-size: 18px;
+    text-align: left;
   }
   
   .eventListContainer h2 {
@@ -16,4 +18,12 @@
   .eventListContainerEmpty {
     border: none;
     /* Add additional styles here if needed */
+}
+
+.peeCheck {
+  color: rgb(87, 207, 87);
+}
+
+.deleteButton {
+  margin-left: 20px;
 }
