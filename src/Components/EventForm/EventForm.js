@@ -7,6 +7,7 @@ function EventForm({ onAdd }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(`chosen date:`, eventDate)
     onAdd({ type: eventType, time: eventTime, date: eventDate });
     setEventType("");
     setEventTime("");
@@ -50,7 +51,7 @@ function EventForm({ onAdd }) {
           <input
             type="submit"
             value="Add Event"
-            className="bg-blue-500 text-white rounded p-2 cursor-pointer hover:bg-blue-600"
+            className="bg-teal-600 text-white rounded p-2 px-4 cursor-pointer hover:bg-blue-600"
           />
         </div>
       </form>

@@ -12,7 +12,9 @@ function EventList({events, onDelete }) {
     
     //group them
     const eventsByDate = sortedEvents.reduce((dateGroups, event) => {
-        const date = new Date(event.date).toDateString();
+        console.log(event.date)
+        const date = new Date(event.date).toISOString().split('T')[0];
+        console.log("new date: ", date);
         if (!dateGroups[date]) {
             dateGroups[date] = []
         }
