@@ -49,6 +49,10 @@
   padding: 20px;
 }
 
+.custom-border-color {
+  border-color: #bba2a2;
+}
+
 /* .EventForm label {
   display: flex;      Make the label's child elements to line up in a row 
    align-items: center;   Optional: Align the child elements vertically in the middle 

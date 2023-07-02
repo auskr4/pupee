@@ -15,7 +15,7 @@ function EventForm({ onAdd }) {
   };
 
   return (
-    <div className="border border-gray-200 p-6 rounded">
+    <div className="border custom-border-color p-6 rounded">
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex items-center space-x-4">
           <label>Event Type:</label>
