@@ -30,7 +30,7 @@ function EventList({events, onDelete }) {
     };
 
     return (
-        <div className={hasEvents ? "border custom-border-color p-6 rounded" : "eventListContainerEmpty"}>
+        <div className={hasEvents ? "border custom-border-color p-6 rounded eventListContainer" : "eventListContainerEmpty"}>
             {Object.keys(eventsByDate).map(date => (
                 <div key={date}>
                     <h2>{date}</h2>
