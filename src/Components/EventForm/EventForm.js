@@ -16,7 +16,7 @@ function EventForm({ onAdd }) {
   };
 
   return (
-    <div className="eventFormContainer p-6 rounded stickyForm">
+    <div className="eventFormContainer p-6 stickyForm">
       <form onSubmit={handleSubmit} className="eventForm space-y-4">
         <div className="inline items-center space-x-4">
           <label>Event Type:</label>
