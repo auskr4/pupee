@@ -42,7 +42,7 @@
 }
 
 .App-content {
-  display: flex;
+  display: block;
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
@@ -51,6 +51,10 @@
 
 .custom-border-color {
   border-color: #bba2a2;
+}
+
+.custom-text-color {
+  color: #bba2a2
 }
 
 /* .EventForm label {

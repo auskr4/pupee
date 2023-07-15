@@ -45,7 +45,7 @@ const deleteEvent = (id) => {
   return (
     <div className="App">
       <header className="App-header justify-start">
-        <h1 className="text-left pl-24">puppee <PetsIcon /></h1>
+        <h1 className="text-left pl-24 custom-text-color">puppee <PetsIcon /></h1>
         <div className="App-content">
           <EventForm onAdd={addEvent} />
           <EventList events={events} onDelete={deleteEvent} />

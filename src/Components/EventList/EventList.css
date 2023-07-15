@@ -1,21 +1,22 @@
 .eventListContainer {
-    border: 1px solid #bba2a2;  /* Add a border around the event list */
+    border: 1px solid #ddd;  /* Add a border around the event list */
     padding: 10px;  /* Add some space around the content inside the border */
     margin: 10px;   /* Add some space around the border itself */
   }
   
-  .eventListContainer p {
+.eventListContainer p {
     padding: 10px 0;   /* Add 10px padding at the top and bottom, 0 at the left and right */
     border-bottom: 1px solid #ddd;  /* Add a line below each event */
     font-size: 18px;
     text-align: left;
   }
   
-  .eventListContainer h2 {
+.eventListContainer h2 {
     margin-bottom: 20px;   /* Add 20px space below the date header */
     border-bottom: 2px solid #bbb;  /* Add a thicker line below the date */
   }
-  .eventListContainerEmpty {
+
+.eventListContainerEmpty {
     border: none;
     /* Add additional styles here if needed */
 }
@@ -25,5 +26,18 @@
 }
 
 .deleteButton {
+  border: solid 1px #bbb;
   margin-left: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 4px;
+  padding-left: 4px;
+  border-radius: 10px;
+  /*height: 30px;
+  width: 30px;*/
+  font-size: 1;
+}
+
+.dateHeader h2{
+  color: aquamarine;
 }

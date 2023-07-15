@@ -7,13 +7,18 @@
 } */
 
 .eventFormContainer {
-    border: 1px solid #bba2a2;  /* Add a border around the event list */
-    padding: 10px;  /* Add some space around the content inside the border */
+    border: 1px solid #ddd;  /* Add a border around the event list */
+    padding: 14px;  /* Add some space around the content inside the border */
     margin: 10px;   /* Add some space around the border itself */
-  }
+}
+
+
+.EventForm {
+    display: inline-flex;
+}
 
 .EventForm label {
-    display: block;
+    display: inline;
     align-items: center; /* Optional: To vertically align the text and the select field */
     text-align: left;
     margin-left: 5%;
