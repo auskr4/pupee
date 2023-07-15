@@ -2,14 +2,17 @@
     display: inline;
 }
 
-/* .EventForm {
-    border: 1px solid #bba2a2; 
-} */
+.stickyForm {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }  
 
 .eventFormContainer {
-    border: 1px solid #ddd;  /* Add a border around the event list */
-    padding: 14px;  /* Add some space around the content inside the border */
-    margin: 10px;   /* Add some space around the border itself */
+    border-bottom: 1px solid #ddd; /*revert to border   */
+    padding: 14px;  
+    margin: 10px;   
+    background-color: #404859;
 }
 
 
