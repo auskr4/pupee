@@ -37,7 +37,7 @@ function EventList({events, onDelete }) {
                     {eventsByDate[date].map((event, index) => (
                         <p key={index}>
                             {event.type === 'feed' ? <FastfoodIcon /> : <CheckCircleOutlineIcon className="peeCheck"/> } {event.type === 'feed' ? 'fed' : event.type} at {formatTime(event.time)}
-                            <button className="deleteButton" onClick={() => onDelete(event.id)}>Delete</button>
+                            <button className="bg-red-400 hover:bg-red-500 text-white font-bold py-1 px-1 rounded text-xs ml-2" onClick={() => onDelete(event.id)}>Delete</button>
                         </p>
                     ))}
                 </div>

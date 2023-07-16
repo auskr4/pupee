@@ -23,6 +23,7 @@
 .eventListContainerEmpty {
     border: none;
     margin:auto;
+    margin-top: 16px;
     /* Add additional styles here if needed */
 }
 
