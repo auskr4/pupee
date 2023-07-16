@@ -34,19 +34,6 @@
   z-index: 1000;
 }   */
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .App-content {
   display: block;
   justify-content: space-around;

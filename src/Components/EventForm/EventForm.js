@@ -17,13 +17,13 @@ function EventForm({ onAdd }) {
 
   return (
     <div className="eventFormContainer p-6 stickyForm">
-      <form onSubmit={handleSubmit} className="eventForm space-y-4">
-        <div className="inline items-center space-x-4">
+      <form onSubmit={handleSubmit} className="eventForm">
+        <div className="inline items-center">
           <label className="eventForm">Event Type:</label>
           <select
             value={eventType}
             onChange={(e) => setEventType(e.target.value)}
-            className="flex-grow border border-gray-200 rounded p-1 text-black"
+            className="border-gray-200 rounded p-1 text-black"
           >
             <option value="">Please select Feed or Potty</option>
             <option value="feed">Feed</option>
@@ -31,7 +31,7 @@ function EventForm({ onAdd }) {
             <option value="Poo">Poo</option>
           </select>
         </div>
-        <div className="inline ml-6 items-center space-x-4">
+        <div className="inline ml-6 items-center">
           <label>Time:</label>
           <input
             type="time"
@@ -40,7 +40,7 @@ function EventForm({ onAdd }) {
             className="flex-grow border border-gray-200 rounded p-1 text-black"
           />
         </div>
-        <div className="inline ml-6 items-center space-x-4">
+        <div className="inline ml-6 items-center">
           <label>Date:</label>
           <input
             type="date"

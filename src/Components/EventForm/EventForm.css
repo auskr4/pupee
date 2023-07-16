@@ -23,7 +23,6 @@
     display: inline;
     align-items: center; /* Optional: To vertically align the text and the select field */
     text-align: left;
-    margin-left: 5%;
     padding: 5px;
     color: #ddd;
 }
@@ -34,12 +33,10 @@
 
 .EventForm input {
     text-align: left;
-    margin-left: 5%;
 }
 
 .EventForm input[type="submit"] {
     display: block;
-    margin-left: 5%;
 }
 
 .EventForm input[type="time"],
@@ -72,6 +69,7 @@
     border-radius: 5px;
     background-color: #f9f9f9;
     transition: all 0.3s ease;
+    margin-left: 0;
 }
 
 .EventForm select:focus {
