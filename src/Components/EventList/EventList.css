@@ -1,8 +1,10 @@
 .eventListContainer {
     border: 1px solid #ddd;  /* Add a border around the event list */
     padding: 10px;  /* Add some space around the content inside the border */
-    margin: 10px;   /* Add some space around the border itself */
+    margin: auto;   /* Add some space around the border itself */
     background-color: #282c34;
+    width: 80%;
+    margin-top: 16px;
   }
   
 .eventListContainer p {
@@ -20,6 +22,7 @@
 
 .eventListContainerEmpty {
     border: none;
+    margin:auto;
     /* Add additional styles here if needed */
 }
 
