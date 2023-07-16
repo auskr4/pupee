@@ -19,7 +19,7 @@ function EventForm({ onAdd }) {
     <div className="eventFormContainer p-6 stickyForm">
       <form onSubmit={handleSubmit} className="eventForm space-y-4">
         <div className="inline items-center space-x-4">
-          <label>Event Type:</label>
+          <label className="eventForm">Event Type:</label>
           <select
             value={eventType}
             onChange={(e) => setEventType(e.target.value)}

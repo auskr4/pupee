@@ -10,8 +10,7 @@
 
 .eventFormContainer {
     border-bottom: 1px solid #ddd; /*revert to border   */
-    padding: 14px;  
-    margin: 10px;   
+    padding: 14px;   
     background-color: #404859;
 }
 
@@ -20,12 +19,13 @@
     display: inline-flex;
 }
 
-.EventForm label {
+.eventForm label {
     display: inline;
     align-items: center; /* Optional: To vertically align the text and the select field */
     text-align: left;
     margin-left: 5%;
     padding: 5px;
+    color: #ddd;
 }
 
 .EventForm label select {
@@ -92,4 +92,8 @@
 
 .EventForm input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+.EventForm div {
+    color: #ddd;
 }

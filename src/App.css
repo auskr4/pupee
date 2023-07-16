@@ -20,14 +20,19 @@
 .App-header {
   /*background-color: #282c34;*/
   background-color: #404859;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  min-height: 15vh;
+  display: block;
   /* align-items: center; */
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+/* .stickyHeader{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}   */
 
 .App-link {
   color: #61dafb;
@@ -47,7 +52,8 @@
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
-  padding: 20px;
+  background-color: #404859;
+
 }
 
 .custom-border-color {
@@ -58,36 +64,7 @@
   color: #bba2a2
 }
 
-/* .EventForm label {
-  display: flex;      Make the label's child elements to line up in a row 
-   align-items: center;   Optional: Align the child elements vertically in the middle 
-  gap: 1rem;      Optional: Add some gap between the child elements 
-  text-align: left;
-  margin-left: 5%;
-}
+.App-header h1 {
+  padding: 20px;
 
-.EventForm input {
-  margin-left: 0;     Remove left margin for inputs to align them properly 
 }
-
-.EventForm .dateTimePicker {
-  display: flex;      Make the label's child elements to line up in a row 
-  align-items: center;    Optional: Align the child elements vertically in the middle 
-}
-
-.EventForm .dateTimePicker input {
-  margin-left: 0;     Remove left margin for inputs to align them properly 
-}
-
-.EventList {
-  padding-left: 20px;
-  margin-left: 20px;
-  border-left: 1px solid #ddd;
-}
-
-.eventListContainer {
-  border: 1px solid #c0a7a7;   Add a border around the event list 
-  padding: 10px;   Add some space around the content inside the border 
-  margin: 10px;    Add some space around the border itself 
-}
- */

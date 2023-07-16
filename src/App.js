@@ -44,13 +44,13 @@ const deleteEvent = (id) => {
 
   return (
     <div className="App">
-      <header className="App-header justify-start">
+      <header className="App-header justify-start stickyHeader">
         <h1 className="text-left pl-24 custom-text-color">puppee <PetsIcon /></h1>
-        <div className="App-content">
-          <EventForm onAdd={addEvent} />
-          <EventList events={events} onDelete={deleteEvent} />
-        </div>
       </header>
+      <div className="App-content">
+        <EventForm onAdd={addEvent} />
+        <EventList events={events} onDelete={deleteEvent} />
+      </div>
     </div>
   );  
 }
