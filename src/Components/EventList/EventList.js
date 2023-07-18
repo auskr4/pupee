@@ -8,7 +8,7 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 function EventList({events, onDelete }) {
 
     //sort Events
-    const sortedEvents = [...events].sort((a, b) => a.date.localeCompare(b.date));
+    const sortedEvents = [...events].sort((a, b) => b.date.localeCompare(a.date));
     
     //group them
     const eventsByDate = sortedEvents.reduce((dateGroups, event) => {
