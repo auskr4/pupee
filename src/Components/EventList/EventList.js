@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './EventList.css'
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import { Button } from "@mui/material";
 
 
 
@@ -37,7 +38,14 @@ function EventList({events, onDelete }) {
                     {eventsByDate[date].map((event, index) => (
                         <p key={index}>
                             {event.type === 'feed' ? <FastfoodIcon /> : <CheckCircleOutlineIcon className="peeCheck"/> } {event.type === 'feed' ? 'fed' : event.type} at {formatTime(event.time)}
-                            <button className="bg-red-400 hover:bg-red-500 text-white font-bold py-1 px-1 rounded text-xs ml-2" onClick={() => onDelete(event.id)}>Delete</button>
+                            {/* show checkbox if event.type === 'feed' */}
+                            {event.type === 'feed' &&
+                                <>
+                                    <label className="ateLabel">Ate?</label>
+                                    <input type="checkbox" className="ateCheckBox" checked={event.ate || false }></input>
+                                </>
+                            }
+                            <button className="deleteButton bg-red-400 hover:bg-red-500 text-white font-bold py-1 px-1 rounded text-xs ml-2" onClick={() => onDelete(event.id)}>Delete</button>
                         </p>
                     ))}
                 </div>
