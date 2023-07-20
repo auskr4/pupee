@@ -8,7 +8,7 @@ function EventForm({ onAdd }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`chosen date:`, eventDate)
+    //console.log(`chosen date:`, eventDate)
     onAdd({ type: eventType, time: eventTime, date: eventDate });
     setEventType("");
     setEventTime("");

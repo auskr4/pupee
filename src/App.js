@@ -34,6 +34,20 @@ const deleteEvent = (id) => {
   .then(() => setEvents(prevEvents => prevEvents.filter(event => event.id !== id)));
 };
 
+const handleUpdateAte = (ate, id) => {
+  console.log(`id: ${id}....ate: ${ate}`);
+  // fetch(`http://localhost:5001/events/${id}`, {
+  //     method: 'PATCH',
+  //     headers: {
+  //         'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(e),
+  // })
+  // .then(response => response.json())
+  // .then((data) => setEvents(prevEvents => [...prevEvents, data]))
+};
+
+
   //fetch existing records when component loads
   useEffect(() => {
     axios.get('http://localhost:5001/events')
@@ -49,7 +63,7 @@ const deleteEvent = (id) => {
       </header>
       <div className="App-content">
         <EventForm onAdd={addEvent} />
-        <EventList events={events} onDelete={deleteEvent} />
+        <EventList events={events} onDelete={deleteEvent} onUpdate={handleUpdateAte}/>
       </div>
     </div>
   );  
