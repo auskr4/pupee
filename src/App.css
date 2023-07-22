@@ -39,8 +39,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #404859;
-
+  /* background-color: #404859; */
+  background-color: #61697a;
 }
 
 .custom-border-color {
@@ -48,10 +48,22 @@
 }
 
 .custom-text-color {
-  color: #bba2a2
+  /* color: #bba2a2 */
+  color: #cae3d4;
 }
 
 .App-header h1 {
   padding: 50px;
-
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  text-align: center;
+  font-size: 4em;
+  font-family: 'Nunito Sans', sans-serif;
 }
+
+.pawprint {
+  height: 80px !important;
+  width: 80px !important;
+}
+

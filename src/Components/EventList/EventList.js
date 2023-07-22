@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './EventList.css'
 import FastfoodIcon from '@mui/icons-material/Fastfood';
+import ClearIcon from '@mui/icons-material/Clear';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { Button } from "@mui/material";
 
@@ -14,9 +15,9 @@ function EventList({events, onDelete, onUpdate}) {
     const sortedEvents = [...events].sort((a, b) => b.date.localeCompare(a.date));
     //group them
     const eventsByDate = sortedEvents.reduce((dateGroups, event) => {
-        console.log(event.date)
+        // console.log(event.date)
         const date = new Date(event.date).toISOString().split('T')[0];
-        console.log("new date: ", date);
+        //console.log("new date: ", date);
         if (!dateGroups[date]) {
             dateGroups[date] = []
         }
@@ -32,7 +33,7 @@ function EventList({events, onDelete, onUpdate}) {
     };
 
     return (
-        <div className={hasEvents ? "border custom-border-color p-6 rounded eventListContainer" : "eventListContainerEmpty"}>
+        <div className={hasEvents ? "border custom-border-color p-6 rounded-xl eventListContainer" : "eventListContainerEmpty"}>
             {Object.keys(eventsByDate).map(date => (
                 <div key={date} className="dateHeader">
                     <h2>{date}</h2>
@@ -46,7 +47,8 @@ function EventList({events, onDelete, onUpdate}) {
                                     <input type="checkbox" checked={event.ate || false} onChange={(e) => onUpdate(e.target.checked, event.id)} className="ateCheckBox" ></input>
                                 </>
                             }
-                            <button className="deleteButton bg-red-400 hover:bg-red-500 text-white font-bold py-1 px-1 rounded text-xs ml-2" onClick={() => onDelete(event.id)}>Delete</button>
+                            <ClearIcon className="deleteIcon" onClick={() => onDelete(event.id)} />
+                            {/* <button className="deleteButton bg-red-400 hover:bg-red-500 text-white font-bold py-1 px-1 rounded text-xs ml-2" onClick={() => onDelete(event.id)}>Delete</button> */}
                         </p>
                     ))}
                 </div>

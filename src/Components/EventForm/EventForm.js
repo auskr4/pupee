@@ -53,7 +53,7 @@ function EventForm({ onAdd }) {
           <input
             type="submit"
             value="Add Event"
-            className="bg-teal-600 ml-6 text-white rounded p-2 px-4 cursor-pointer hover:bg-blue-600"
+            className="submitEventButton ml-6 text-white rounded p-2 px-4 cursor-pointer hover:bg-blue-600"
           />
         </div>
       </form>

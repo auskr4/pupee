@@ -95,3 +95,8 @@
 .EventForm div {
     color: #ddd;
 }
+
+.submitEventButton {
+    color: black;
+    background-color: #cae3d4;;
+}

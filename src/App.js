@@ -35,16 +35,24 @@ const deleteEvent = (id) => {
 };
 
 const handleUpdateAte = (ate, id) => {
-  console.log(`id: ${id}....ate: ${ate}`);
-  // fetch(`http://localhost:5001/events/${id}`, {
-  //     method: 'PATCH',
-  //     headers: {
-  //         'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify(e),
-  // })
-  // .then(response => response.json())
-  // .then((data) => setEvents(prevEvents => [...prevEvents, data]))
+  //console.log(`id: ${id}....ate: ${ate}`);
+  fetch(`http://localhost:5001/events/${id}`, {
+      method: 'PATCH',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ate}),
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`${response.status}: ${response.statusText}`)
+    }
+    return response.json();
+  })
+  .then((data) => setEvents(prevEvents => prevEvents.map(event => event.id === id ? {...event, ate} : event )))
+  .catch(error => {
+    console.log(`Fetch error: ${error.message}`)
+  });
 };
 
 
@@ -53,13 +61,14 @@ const handleUpdateAte = (ate, id) => {
     axios.get('http://localhost:5001/events')
       .then((response) => {
         setEvents(response.data)
-      });
+        console.log(`events data: ${JSON.stringify(response.data, null, 2)}`);
+      })
   }, []);
 
   return (
     <div className="App">
       <header className="App-header justify-start stickyHeader">
-        <h1 className="text-left pl-24 custom-text-color">puppee <PetsIcon /></h1>
+        <h1 className="text-left pl-24 custom-text-color">puppee <PetsIcon className="pawprint"/></h1>
       </header>
       <div className="App-content">
         <EventForm onAdd={addEvent} />
