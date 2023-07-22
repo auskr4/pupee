@@ -100,5 +100,6 @@
 
 .submitEventButton {
     color: black;
-    background-color: #cae3d4;;
+    /* background-color: #cae3d4; */
+    background-color: #7ed893;
 }

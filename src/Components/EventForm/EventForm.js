@@ -19,20 +19,20 @@ function EventForm({ onAdd }) {
     <div className="eventFormContainer p-6 stickyForm">
       <form onSubmit={handleSubmit} className="eventForm">
         <div className="inline items-center">
-          <label className="eventForm">Event Type:</label>
+          <label className="eventForm">What? </label>
           <select
             value={eventType}
             onChange={(e) => setEventType(e.target.value)}
             className="border-gray-200 rounded p-1 text-black"
           >
-            <option value="">Please select Feed or Potty</option>
+            <option value="">Select Feed or Potty</option>
             <option value="feed">Feed</option>
             <option value="Pee">Pee</option>
             <option value="Poo">Poo</option>
           </select>
         </div>
         <div className="inline ml-6 items-center">
-          <label>Time:</label>
+          <label>Time: </label>
           <input
             type="time"
             value={eventTime}
@@ -41,7 +41,7 @@ function EventForm({ onAdd }) {
           />
         </div>
         <div className="inline ml-6 items-center">
-          <label>Date:</label>
+          <label>Date: </label>
           <input
             type="date"
             value={eventDate}
@@ -52,7 +52,7 @@ function EventForm({ onAdd }) {
         <div className="inline items-start">
           <input
             type="submit"
-            value="Add Event"
+            value="Log"
             className="submitEventButton ml-6 text-white rounded p-2 px-4 cursor-pointer hover:bg-blue-600"
           />
         </div>
