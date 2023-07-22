@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import EventForm from './Components/EventForm/EventForm';
 import EventList from "./Components/EventList/EventList";
+import Dashboard from "./Components/Dashboard/Dashboard";
 import axios from 'axios';
 import PetsIcon from '@mui/icons-material/Pets';
 
@@ -72,7 +73,10 @@ const handleUpdateAte = (ate, id) => {
       </header>
       <div className="App-content">
         <EventForm onAdd={addEvent} />
-        <EventList events={events} onDelete={deleteEvent} onUpdate={handleUpdateAte}/>
+        <div className="content-row">
+          <Dashboard />
+          <EventList events={events} onDelete={deleteEvent} onUpdate={handleUpdateAte}/>
+        </div>
       </div>
     </div>
   );  

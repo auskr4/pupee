@@ -1,10 +1,11 @@
 .eventListContainer {
-    border: 1px solid #ddd;  /* Add a border around the event list */
+    /* border: 1px solid #ddd; */
     padding: 10px;  /* Add some space around the content inside the border */
     margin: auto;
     background-color: #282c34;
     width: 80%;
-    margin-top: 16px;
+    margin-top: 28px;
+    box-shadow: 12px 8px 20px 0px rgba(0, 0, 0, 0.5);
   }
   
 .eventListContainer p {

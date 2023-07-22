@@ -9,9 +9,10 @@
   }  
 
 .eventFormContainer {
-    border-bottom: 1px solid #ddd; /*revert to border   */
+    /* border-bottom: 1px solid #ddd; */
     padding: 14px;   
     background-color: #404859;
+    padding-bottom: 40px;
 }
 
 

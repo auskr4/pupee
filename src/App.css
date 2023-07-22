@@ -20,12 +20,22 @@
 .App-header {
   /*background-color: #282c34;*/
   background-color: #404859;
-  min-height: 15vh;
+  min-height: 5vh;
   display: block;
   /* align-items: center; */
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(2px + 2vmin);
   color: white;
+}
+
+.App-header h1 {
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  text-align: center;
+  font-size: 4em;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 /* .stickyHeader{
@@ -43,6 +53,13 @@
   background-color: #61697a;
 }
 
+.content-row {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  gap: 20px;
+}
+
 .custom-border-color {
   border-color: #bba2a2;
 }
@@ -52,18 +69,8 @@
   color: #cae3d4;
 }
 
-.App-header h1 {
-  padding: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  text-align: center;
-  font-size: 4em;
-  font-family: 'Nunito Sans', sans-serif;
-}
-
 .pawprint {
-  height: 80px !important;
-  width: 80px !important;
+  height: 100px !important;
+  width: 100px !important;
 }
 

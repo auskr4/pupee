@@ -33,7 +33,7 @@ function EventList({events, onDelete, onUpdate}) {
     };
 
     return (
-        <div className={hasEvents ? "border custom-border-color p-6 rounded-xl eventListContainer" : "eventListContainerEmpty"}>
+        <div className={hasEvents ? "p-6 rounded-xl eventListContainer" : "eventListContainerEmpty"}>
             {Object.keys(eventsByDate).map(date => (
                 <div key={date} className="dateHeader">
                     <h2>{date}</h2>
