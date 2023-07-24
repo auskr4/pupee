@@ -24,6 +24,7 @@ function EventForm({ onAdd }) {
             value={eventType}
             onChange={(e) => setEventType(e.target.value)}
             className="border-gray-200 rounded p-1 text-black"
+            required
           >
             <option value="">Select Feed or Potty</option>
             <option value="feed">Feed</option>
@@ -38,6 +39,7 @@ function EventForm({ onAdd }) {
             value={eventTime}
             onChange={(e) => setEventTime(e.target.value)}
             className="flex-grow border border-gray-200 rounded p-1 text-black"
+            required
           />
         </div>
         <div className="inline ml-6 items-center">
@@ -47,6 +49,7 @@ function EventForm({ onAdd }) {
             value={eventDate}
             onChange={(e) => setEventDate(e.target.value)}
             className="flex-grow border border-gray-200 rounded p-1 text-black"
+            required
           />
         </div>
         <div className="inline items-start">

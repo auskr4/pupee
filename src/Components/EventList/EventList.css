@@ -15,6 +15,7 @@
     font-size: 18px;
     text-align: left;
     color: #ddd;
+    margin: 0px 6px;
   }
   
 .eventListContainer h2 {
@@ -29,19 +30,19 @@
     /* Add additional styles here if needed */
 }
 
-.peeCheck {
-  color: #7ed893;
+.eventRow {
+  padding-left: 8px;
 }
 
-.deleteButton {
-  float: right;
-  margin-right: 40px;
+.peeCheck {
+  color: #7ed893;
 }
 
 .dateHeader h2{
   /* color: aquamarine; */
   /* color: #cae3d4; */
   color: #a8e3c0;
+  padding-bottom: 4px;
 }
 
 .ateCheckBox {
@@ -57,7 +58,7 @@
 .deleteIcon {
   color: #bb5b5b;
   float: right;
-  margin-right: 40px;
+  margin-right: 8px;
   font-size: 24px;
   cursor: pointer;
 }

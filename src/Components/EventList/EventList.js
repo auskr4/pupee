@@ -39,15 +39,17 @@ function EventList({events, onDelete, onUpdate}) {
                     <h2>{date}</h2>
                     {eventsByDate[date].map((event, index) => (
                         <p key={index}>
-                            {event.type === 'feed' ? <FastfoodIcon /> : <CheckCircleOutlineIcon className="peeCheck"/> } {event.type === 'feed' ? 'fed' : event.type} at {formatTime(event.time)}
-                            {/* show checkbox if event.type === 'feed' */}
-                            {event.type === 'feed' &&
-                                <>
-                                    <label className="ateLabel">Ate?</label>
-                                    <input type="checkbox" checked={event.ate || false} onChange={(e) => onUpdate(e.target.checked, event.id)} className="ateCheckBox" ></input>
-                                </>
-                            }
-                            <ClearIcon className="deleteIcon" onClick={() => onDelete(event.id)} />
+                            <div className="eventRow">
+                                {event.type === 'feed' ? <FastfoodIcon /> : <CheckCircleOutlineIcon className="peeCheck"/> } {event.type === 'feed' ? 'fed' : event.type} at {formatTime(event.time)}
+                                {/* show checkbox if event.type === 'feed' */}
+                                {event.type === 'feed' &&
+                                    <>
+                                        <label className="ateLabel">Ate?</label>
+                                        <input type="checkbox" checked={event.ate || false} onChange={(e) => onUpdate(e.target.checked, event.id)} className="ateCheckBox" ></input>
+                                    </>
+                                }
+                                <ClearIcon className="deleteIcon" onClick={() => onDelete(event.id)} />
+                            </div>
                             {/* <button className="deleteButton bg-red-400 hover:bg-red-500 text-white font-bold py-1 px-1 rounded text-xs ml-2" onClick={() => onDelete(event.id)}>Delete</button> */}
                         </p>
                     ))}
