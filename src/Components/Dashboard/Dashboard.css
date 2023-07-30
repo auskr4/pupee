@@ -8,3 +8,11 @@
     box-shadow: 12px 8px 20px 0px rgba(0, 0, 0, 0.5);
     height: 300px;
 }
+
+.tab-label {
+    color: #fff !important;
+}
+
+.tab-content {
+    color: white !important;
+}

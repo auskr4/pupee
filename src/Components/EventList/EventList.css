@@ -4,9 +4,29 @@
     margin: auto;
     background-color: #282c34;
     width: 80%;
+    height: 400px;
     margin-top: 28px;
     box-shadow: 12px 8px 20px 0px rgba(0, 0, 0, 0.5);
+    overflow: auto;
   }
+  /* This targets the scrollbar thumb */
+  .eventListContainer::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 10px;  /* Make the scrollbar thumb rounded */
+    border: 3px solid transparent;
+  }
+  
+  /* This targets the scrollbar track */
+  .eventListContainer::-webkit-scrollbar-track {
+    background-color: lightgrey;
+    border-radius: 10px;  /* Make the scrollbar track rounded */
+  }
+  
+  /* This targets the scrollbar itself */
+  .eventListContainer::-webkit-scrollbar {
+    width: 10px;
+  }
+  
   
 .eventListContainer p {
     padding: 10px 0;   /* Add 10px padding at the top and bottom, 0 at the left and right */
@@ -19,8 +39,7 @@
   }
   
 .eventListContainer h2 {
-    margin-bottom: 20px;   
-    border-bottom: 3px solid #61697a;  
+    margin-bottom: 20px;    
   }
 
 .eventListContainerEmpty {
@@ -38,12 +57,29 @@
   color: #7ed893;
 }
 
-.dateHeader h2{
-  /* color: aquamarine; */
-  /* color: #cae3d4; */
-  color: #a8e3c0;
-  padding-bottom: 4px;
+.dateHeader h2 {
+    position: relative;
+    /* border-bottom: 1px solid #ddd; */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-top: 16px;
+    color: #a8e3c0;
+    padding-bottom: 4px;
 }
+
+/*divder after date header*/
+.dateHeader h2::after { 
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+    height: 1px;
+    background: white;
+    border-radius: 0 0 10px 10px;
+}
+
+
 
 .ateCheckBox {
   margin: 8px;
