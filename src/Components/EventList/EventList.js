@@ -4,6 +4,9 @@ import FastfoodIcon from '@mui/icons-material/Fastfood';
 import ClearIcon from '@mui/icons-material/Clear';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { Button } from "@mui/material";
+import Checkbox from '@mui/material/Checkbox';
+import { green, yellow } from '@mui/material/colors';
+import { formatTime } from '../../utils/utils';
 
 
 
@@ -27,10 +30,9 @@ function EventList({events, onDelete, onUpdate}) {
 
     const hasEvents = events.length > 0;
 
-    const formatTime = (timeString) => {
-        const options = { hour: 'numeric', minute: '2-digit', hour12: true };
-        return new Date(`2000-01-01T${timeString}`).toLocaleTimeString([], options);
-    };
+    //formatTime was here
+
+    const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
     return (
         <div className={hasEvents ? "p-6 rounded-xl eventListContainer" : "eventListContainerEmpty"}>
@@ -45,7 +47,15 @@ function EventList({events, onDelete, onUpdate}) {
                                 {event.type === 'feed' &&
                                     <>
                                         <label className="ateLabel">Ate?</label>
-                                        <input type="checkbox" checked={event.ate || false} onChange={(e) => onUpdate(e.target.checked, event.id)} className="ateCheckBox" ></input>
+                                        {/* <input type="checkbox" checked={event.ate || false} onChange={(e) => onUpdate(e.target.checked, event.id)} className="ateCheckBox" ></input> */}
+                                        <Checkbox 
+                                        sx={{
+                                            color: green[200],
+                                            '&.Mui-checked': {
+                                              color: green[700],
+                                            },
+                                        }}
+                                        size="small" checked={event.ate || false} onChange={(e) => onUpdate(e.target.checked, event.id)} className="ateCheckBox" />
                                     </>
                                 }
                                 <ClearIcon className="deleteIcon" onClick={() => onDelete(event.id)} />
